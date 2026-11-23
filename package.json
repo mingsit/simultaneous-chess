@@ -1,0 +1,26 @@
+{
+  "name": "simultaneous-chess",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simultaneous Chess - both players move at the same time.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "next dev -p 3000",
+    "dev:server": "node server/index.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/clean.mjs cache",
+    "start": "node server/index.mjs",
+    "clean": "node scripts/clean.mjs",
+    "clean:cache": "node scripts/clean.mjs cache",
+    "test": "node scripts/test-engine.mjs && node scripts/test-ai.mjs",
+    "test:ai": "node scripts/test-ai.mjs",
+    "test:online": "node scripts/test-online.mjs",
+    "bench:ai": "node scripts/bench-ai.mjs"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.18.3"
+  }
+}
